@@ -17,84 +17,25 @@
 
 ## Hints
 
-<details class="Initial Access">
-    <summary>Initial Access<small> (click to reveal) </small></summary>
-		<details style="margin-left: 20px;" class="Initial Access">
-			<summary>Hint #1</summary>
-			<ul>
-				<li>Have you found the Joomla Admin interface?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="Initial Access">
-			<summary>Hint #2</summary>
-			<ul>
-				<li>Did you run DirBuster and locate interesting files?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="Initial Access">
-			<summary>Hint #3</summary>
-			<ul>
-				<li>Did you explore the Joomla Administrator CMS and exploit Default Configurations?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="Initial Access">
-			<summary>Hint #4</summary>
-			<ul>
-				<li>Have you used Default Templates to modify available site details to include a php reverse shell?</li>
-			</ul>
-		</details>
-</details>
+>[!hint] Initial Access
+>[Hint #1](## "Have you found the Joomla Admin interface?")
+>[Hint #2](## "Did you run DirBuster and locate interesting files?")
+>[Hint #3](## "Did you explore the Joomla Administrator CMS and exploit Default Configurations?")
+>[Hint #4](## "Have you used Default Templates to modify available site details to include a php reverse shell?")
+>
 
-<details class="Shell Access">
-    <summary>Shell Access<small> (click to reveal) </small></summary>
-		<details style="margin-left: 20px;" class="Shell Access">
-			<summary>Hint #1</summary>
-			<ul>
-				<li>Have you searched for configuration and possible `password` files?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="Shell Access">
-			<summary>Hint #2</summary>
-			<ul>
-				<li>Have you elevated yourself from service access to user access?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="Shell Access">
-			<summary>Hint #3</summary>
-			<ul>
-				<li>Have you enumerated User Access to escalate to Elevated User Access?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="Shell Access">
-			<summary>Hint #4</summary>
-			<ul>
-				<li>Have you used the CP command to escalate to SSH Access?</li>
-			</ul>
-		</details>
-</details>
+>[!hint] Shell Access
+>[Hint #1](## "Have you searched for configuration and possible `password` files?")
+>[Hint #2](## "Have you elevated yourself from service access to user access?")
+>[Hint #3](## "Have you enumerated User Access to escalate to Elevated User Access?")
+>[Hint #4](## "Have you used the CP command to escalate to SSH Access?")
+>
 
-<details class="SSH Access">
-	<summary>SSH Access<small> (click to reveal) </small></summary>
-		<details style="margin-left: 20px;" class="SSH Access">
-			<summary>Hint #1</summary>
-			<ul>
-				<li>Have you found the `password` file?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="SSH Access">
-			<summary>Hint #2</summary>
-			<ul>
-				<li>Have you Enumerated the capabilities of the Elevated User?</li>
-			</ul>
-		</details>
-		<details style="margin-left: 20px;" class="SSH Access">
-			<summary>Hint #3</summary>
-			<ul>
-				<li>Have you searched GTFObins for the appropriate PrivEsc?</li>
-			</ul>
-		</details>
-</details>
-
+>[!hint] SSH Access
+>[Hint #1](## "Have you found the `password` file?")
+>[Hint #2](## "Have you Enumerated the capabilities of the Elevated User?")
+>[Hint #3](## "Have you searched GTFObins for the appropriate PrivEsc?")
+>
 
 ## Enumeration
 
