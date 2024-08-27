@@ -1,42 +1,131 @@
 # Walkthrough
 
-## Target Details
-- Download Link: https://www.vulnhub.com/entry/shenron-1,630/
-- Name: shenron 1
-- Date release: 15 Dec 2020
-- Author: [Shubham mandloi](https://www.vulnhub.com/author/shubham-mandloi,768/)
-- Series: [shenron](https://www.vulnhub.com/series/shenron,427/)
-- Difficulty: Easy
-- Tags: Fuzzing, Web CMS, Directory Listing, Stored Credentials, SUIDs
-- Avg Completion Time: 1.5 Hours
+ <head>
+  <style>
+    {
+      box-sizing: border-box;
+    }
+    .column {
+      float: left;
+      width: 50%;
+    }
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="column">
+    <h2>Target Details</h2>
+        <ul>
+            <li><a href="https://www.vulnhub.com/entry/shenron-1,630/">Download</a></li>
+            <li>Name: shenron 1</li>
+            <li>Date release: 15 Dec 2020</li>
+            <li>Author: <a href="https://www.vulnhub.com/author/shubham-mandloi,768/">Shubham mandloi</a></li>
+            <li>Series: <a href="https://www.vulnhub.com/series/shenron,427/">Shenron</a></li>
+            <li>Difficulty: Easy</li>
+            <li>Tags: Fuzzing, Web CMS, Directory Listing, Stored Credentials, SUIDs</li>
+            <li>Avg Completion Time: 1.5 Hours</li>
+        </ul>
+    </div>
+    <div class="column">
+        <h2>Popular Tools</h2>
+        <ul>
+            <li> Feroxbuster </li>
+            <li><a href="https://github.com/brightio/penelope">Penelope Shell Handler</a></li>
+            <li><a href="https://gtfobins.github.io/">GTFOBins</a></li>
+        </ul>
+    </div>
+  </div>
+</body>
 
-## Popular Tools
-- Feroxbuster
-- [Penelope Shell Handler](https://github.com/brightio/penelope)
-- [GTFOBins](https://gtfobins.github.io/)
 
 ## Hints
 
->[!hint] Initial Access
->[Hint #1](## "Have you found the Joomla Admin interface?")
->[Hint #2](## "Did you run DirBuster and locate interesting files?")
->[Hint #3](## "Did you explore the Joomla Administrator CMS and exploit Default Configurations?")
->[Hint #4](## "Have you used Default Templates to modify available site details to include a php reverse shell?")
+>[!Hint] Click to reveal hints
+><details class="Initial Access">
+>  <summary>Initial Access</summary>
+>    <details style="margin-left: 20px;" class="Initial Access">
+>      <summary>Hint #1</summary>
+>      <ul>
+>        <li>Have you found the Joomla Admin interface?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="Initial Access">
+>      <summary>Hint #2</summary>
+>      <ul>
+>        <li>Did you run DirBuster and locate interesting files?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="Initial Access">
+>      <summary>Hint #3</summary>
+>      <ul>
+>        <li>Did you explore the Joomla Administrator CMS and exploit Default Configurations?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="Initial Access">
+>      <summary>Hint #4</summary>
+>      <ul>
+>        <li>Have you used Default Templates to modify available site details to include a php reverse shell?</li>
+>      </ul>
+>    </details>
+></details>
+><details class="Shell Access">
+>  <summary>Shell Access</summary>
+>    <details style="margin-left: 20px;" class="Shell Access">
+>      <summary>Hint #1</summary>
+>      <ul>
+>        <li>Have you searched for configuration and possible `password` files?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="Shell Access">
+>      <summary>Hint #2</summary>
+>      <ul>
+>        <li>Have you elevated yourself from service access to user access?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="Shell Access">
+>      <summary>Hint #3</summary>
+>      <ul>
+>        <li>Have you enumerated User Access to escalate to Elevated User Access?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="Shell Access">
+>      <summary>Hint #4</summary>
+>      <ul>
+>        <li>Have you used the CP command to escalate to SSH Access?</li>
+>      </ul>
+>    </details>
+></details>
+><details class="SSH Access">
+>  <summary>SSH Access</summary>
+>    <details style="margin-left: 20px;" class="SSH Access">
+>      <summary>Hint #1</summary>
+>      <ul>
+>        <li>Have you found the `password` file?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="SSH Access">
+>      <summary>Hint #2</summary>
+>      <ul>
+>        <li>Have you Enumerated the capabilities of the Elevated User?</li>
+>      </ul>
+>    </details>
+>    <details style="margin-left: 20px;" class="SSH Access">
+>      <summary>Hint #3</summary>
+>      <ul>
+>        <li>Have you searched GTFObins for the appropriate PrivEsc?</li>
+>      </ul>
+>    </details>
+></details>
 >
 
->[!hint] Shell Access
->[Hint #1](## "Have you searched for configuration and possible `password` files?")
->[Hint #2](## "Have you elevated yourself from service access to user access?")
->[Hint #3](## "Have you enumerated User Access to escalate to Elevated User Access?")
->[Hint #4](## "Have you used the CP command to escalate to SSH Access?")
->
 
->[!hint] SSH Access
->[Hint #1](## "Have you found the `password` file?")
->[Hint #2](## "Have you Enumerated the capabilities of the Elevated User?")
->[Hint #3](## "Have you searched GTFObins for the appropriate PrivEsc?")
->
 
+---
 ## Enumeration
 
 Start with a simple nmap scan just to get an initial target to manually explore and efficiently utilize the time. `nmap {target}`
@@ -132,6 +221,8 @@ Save and Close the Editor and prepare the listener for the reverse shell.
 The `/templates` directory is under the root joomla path and can be accessed directly by browsing to the path for the edited files. Browsing to http://{shenron}/joomla/templates/protostar/shell.php will execute the shell and utilizing [Penelope Shell Handler](https://github.com/brightio/penelope)the shell will escalate to a full PTY shell allowing full capabilities. 
 
 ![[Penelope Reverse Shell]]
+
+---
 ## Shell Access
 
 Shell access grants the attacker access to the files directly on the target device and with the current user `www-data`. Begin to explore and enumerate the machine: 
@@ -151,6 +242,7 @@ The `cp` command allows the user to copy a file to any location which, in this c
 
 ![[User Privilege Escalation]]
 
+---
 ## SSH access
 
 Now with ssh access to the system, persistent access has been obtained and access to a different user. Logging in as the user `shenron`, the local flag is accessible in `shenron`'s `/home/shenron` directory.
@@ -170,4 +262,5 @@ Executing the command as `shenron` and using the password from the `/var/opt/pas
 
 ![[Root Flag]]
 
+---
 # Congratulations and Thank You!!!
